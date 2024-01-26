@@ -38,15 +38,17 @@ Step 1: Remote Desktop into both VMs that were used in the previous lab (DC-1 & 
 <p>
 Step 2: Create four folders on DC-1's C: drive all with different access permissions: 
   - "read-access" - permission: read, 
+  <p>
   - "write-access" - permission read/write", 
+      <p>
   - "no-access" - permission none
+          <p>
   - "accounting" - permission read/write.
 </p>
 <br />
 <p>
 <img src="https://imgur.com/2ptRUDM.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
-<p>
 Step 3: Log into a random employee account on Client-1 to test the newly added permissions/access created in step #2. 
   <p>
   - Type "\\dc-1" into file explorer to show all shared folders created on the domain in step #2.
@@ -63,14 +65,37 @@ Step 4: Create an "Organizational Unit" (OU) in Active Directory on DC-1 titled 
   <p>
 - Create a new group within the OU titled "Accountants"
   <p>
-- Add Client-1's account to the list of "Accountant" members in the group (this will give the client-1 account access to the shared accountant folder created earlier).
+    <br />
+<img src="https://imgur.com/j5HJenP.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<p> 
+- Add 2 random users to the "Accountant" security group (this will give the users access to the shared accountant folder created earlier)
+  <p>
+  - 1st User: babi.com/bixoli.xihep
 </p>
 <br />
-<img src="https://imgur.com/FLEB0F4.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/HR6fATO.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <p>
-<img src="https://imgur.com/FLEB0F4.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+  <p>
+  - 2nd User: babi.com/duva.miduk
+      <p>
+<img src="https://imgur.com/OSsh2Fg.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Step 5: Restart Client-1 to allow the new permission settings to enable. Next access the shared "accountant" folder in \\dc-1  to verify access was successfully set up and granted for this user/employee. This is the conclusion of the lab.
-</p>
+  - Share accounting folder with Accountants Security Group
+  <p>
+    <img src="https://imgur.com/NdsZnns.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+    <p>
+   - Remote desktop Client-1 using one of the accountants security group members (1st user OR 2nd user) 
+      <p>
+      <img src="https://imgur.com/v5lbuDz.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>  
+        <p>
+          - as you can see, the user is having access to the accounting folder.
+          <p>
+            <p>
+   - Remote desktop Client-1 with a user who is not part of the accountants group
+      <p>
+        <p>
+          - The user should not be able to access the accounting folder.
+          <p>
 <br />
+This concludes this tutorial

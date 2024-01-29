@@ -95,7 +95,10 @@ Step 4: Create an "Organizational Unit" (OU) in Active Directory on DC-1 titled 
    - Remote desktop Client-1 with a user who is not part of the accountants group
       <p>
         <p>
-          - The user should not be able to access the accounting folder.
-          <p>
+          - The user should not be able to access the accounting folder as shown below:
+          </p>
+         <p>
+      <img src="https://imgur.com/5PsmWOV.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>  
+        <p>       
 <br />
-This concludes this tutorial
+This concludes this tutorial on file permissions. Please note the criteria for creating security groups can be based on departments or office branches etc as a way of implementing the PoLp. 
